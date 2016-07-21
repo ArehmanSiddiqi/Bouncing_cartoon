@@ -147,16 +147,15 @@ void bounce2(int i)
 
 		if (flip[i] == false)
 		{
-			balls[i][1] -= 10;
+			balls[i][1] -= 5;
 
 		}
 		if (flip[i] == true)
 		{
-			balls[i][1] += 10;
+			balls[i][1] += 5;
 		}
 	}
 }
-GLuint texture;
 
 void Display()/**/{
 	// set the background color using function glClearColor.
@@ -167,9 +166,6 @@ void Display()/**/{
 		1.0/*Blue Component*/, 0 /*Alpha component*/); // Red==Green==Blue==1 --> White Colour
 	glClear(GL_COLOR_BUFFER_BIT); //Update the colors
 
-
-	texture = LoadTexture("AF.bmp");
-	glBindTexture(GL_TEXTURE_2D, texture);
 
 	for (int i = 0; i < 8; i++)
 	{
